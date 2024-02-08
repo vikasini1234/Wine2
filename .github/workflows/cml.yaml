@@ -27,6 +27,7 @@ jobs:
           echo '![](./feature_importance.png)' >> report.md
           echo '![](./residuals.png)' >> report.md
       - name: Publish CML Report
+        
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: cml comment create --publish report.md
